@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nåRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/12c543e733.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="photos/sunnyicon.svg" class="top-icon" />
+        <div class="top-bar">
+          <span class="metric">C | F</span>
+          <button class="geolocation" id="geolocation">
+            <i class="fas fa-map-marker-alt"></i>
+          </button>
+        </div>
+
+        <div class="current-temp">
+          <p class="location">New York City</p>
+          <p class="time">Saturday • 12:50 PM</p>
+          <p class="temp">55</p>
+          <p class="description">Weather Description</p>
+          <p class="low-high">low-high</p>
+        </div>
+        <img
+          src="photos/quotesymbol.svg"
+          class="quotation-mark"
+          alt="quotation mark"
+        />
+        <div class="quote-section">
+          <p class="quote">
+            "Carry out a random act of kindness, with no expectation of reward,
+            safe in the knowledge that one day someone might do the same for
+            you."
+          </p>
+          <p class="author">Princess Diana</p>
+
+          <input
+            type="text"
+            placeholder="Set Your Location"
+            class="form-control"
+            id="set-location"
+            autocomplete="off"
+          />
+
+          <div class="three-day">
+            <div class="row">
+              <div class="col-4">
+                <ul>
+                  <li>
+                    top-icon
+                  </li>
+                  <li>
+                    temp
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li>
+                    top-icon
+                  </li>
+                  <li>
+                    temp
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li>
+                    top-icon
+                  </li>
+                  <li>
+                    temp
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
