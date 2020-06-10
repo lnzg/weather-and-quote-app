@@ -39,6 +39,13 @@ function searchWeather(response) {
   lowHigh.innerHTML = `Low/High: ${Math.round(
     response.data.main.temp_min
   )}°/${Math.round(response.data.main.temp_max)}°`;
+  let icon = document.querySelector("#top-icon");
+  iconElement = response.data.weather[0].icon;
+
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconElement}@2x.png`
+  );
 }
 
 let submit = document.querySelector("#set-location");
@@ -47,6 +54,7 @@ submit.addEventListener("submit", newLocation);
 // Default Location
 
 function getWeather(response) {
+  console.log(response);
   let newTemp = document.querySelector("#temp");
   let location = document.querySelector("#location");
   let weatherDescription = document.querySelector("#description");
@@ -56,10 +64,15 @@ function getWeather(response) {
   lowHigh.innerHTML = `Low/High: ${Math.round(
     response.data.main.temp_min
   )}°/${Math.round(response.data.main.temp_max)}°`;
-
   newTemp.innerHTML = Math.round(response.data.main.temp);
-
   location.innerHTML = "Paris";
+  let icon = document.querySelector("#top-icon");
+  iconElement = response.data.weather[0].icon;
+
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconElement}@2x.png`
+  );
 }
 
 let apiKey = "0577bd96999db21b7c2f3eef1b033562";

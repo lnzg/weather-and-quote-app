@@ -4,7 +4,7 @@ body {
   margin-top: 40px;
   width: 414px;
   height: 800px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 20px;
   padding: 8px 5px;
   font-family: "Poiret One", cursive;
@@ -13,9 +13,8 @@ body {
 }
 
 .top-icon {
-  max-width: 70px;
-
-  margin: 0 auto;
+  max-width: 100px;
+  margin-top: -15px;
   padding: 0px;
 }
 
@@ -26,7 +25,7 @@ body {
 .metric {
   position: relative;
   left: 150px;
-  bottom: 78px;
+  bottom: 88px;
   font-size: 20px;
   padding: 0px;
 }
@@ -52,13 +51,13 @@ body {
   background: none;
   color: #black;
   position: relative;
-  bottom: 74px;
+  bottom: 85px;
   display: inline;
   left: 155px;
 }
 
 .geolocation:hover {
-  color: orange;
+  color: #ec6e4c;
 }
 
 .geolocation:active,
@@ -69,18 +68,20 @@ body {
 .location {
   font-size: 30px;
   margin-bottom: 0px;
+  margin-top: -13px;
+  letter-spacing: 2px;
 }
 
 .time {
   margin: 0px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-size: 18px;
 }
 
 .temp {
   font-size: 80px;
   margin: 0px;
-  line-height: 100px;
+  line-height: 90px;
 }
 
 .description {
@@ -99,21 +100,21 @@ body {
 }
 
 .quotation-mark {
-  margin-top: 20px;
-  margin-bottom: 14px;
+  margin-top: 10px;
+  margin-bottom: 8px;
   max-width: 50px;
   padding: 5px;
 }
 
 .quote-section {
-  padding-top: 10px;
+  padding-top: 5px;
 
   height: 250px;
 }
 .quote {
   letter-spacing: 1px;
   margin-bottom: 25px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .author {
@@ -122,10 +123,12 @@ body {
 
 .form-control {
   text-transform: uppercase;
+  border: 1px solid black;
+  color: black;
 }
 .form-control:hover,
 .form-control:focus {
-  border: 1px solid black;
+  border: 1px solid #ec6e4c;
   box-shadow: none;
   text-transform: uppercase;
 }
@@ -139,26 +142,6 @@ body {
 .go {
   padding-left: 0px;
   padding-right: 0px;
-}
-
-.arrow {
-  padding-top: 6px;
-  padding-left: 10px;
-}
-.arrow,
-.arrow:active,
-.arrow:focus {
-  background-color: none;
-  background: none;
-  border: none;
-  color: gray;
-  border-color: none;
-  outline: none;
-  box-shadow: none;
-}
-
-.arrow:hover {
-  color: black;
 }
 
 .three-day {
