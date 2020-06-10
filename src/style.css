@@ -31,6 +31,19 @@ body {
   padding: 0px;
 }
 
+.active,
+.active:hover,
+.active:active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+.f:hover,
+.c:hover {
+  text-decoration: none;
+}
+
 .geolocation {
   border: none;
   font-size: 30px;
@@ -42,7 +55,6 @@ body {
   bottom: 74px;
   display: inline;
   left: 155px;
-  position: relative;
 }
 
 .geolocation:hover {
@@ -108,10 +120,45 @@ body {
   letter-spacing: 2px;
 }
 
+.form-control {
+  text-transform: uppercase;
+}
 .form-control:hover,
 .form-control:focus {
   border: 1px solid black;
   box-shadow: none;
+  text-transform: uppercase;
+}
+
+.enter {
+  padding-left: 5px;
+  padding-right: 8px;
+  margin: 0px;
+}
+
+.go {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.arrow {
+  padding-top: 6px;
+  padding-left: 10px;
+}
+.arrow,
+.arrow:active,
+.arrow:focus {
+  background-color: none;
+  background: none;
+  border: none;
+  color: gray;
+  border-color: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.arrow:hover {
+  color: black;
 }
 
 .three-day {

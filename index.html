@@ -33,18 +33,18 @@
       <div class="header">
         <img src="photos/sunnyicon.svg" class="top-icon" />
         <div class="top-bar">
-          <span class="metric">C | F</span>
+          <span class="metric"><a href="#" id="c" class="c">C</a> | <a href="#" id="f" class="f active">F °</a></span>
           <button class="geolocation" id="geolocation">
             <i class="fas fa-map-marker-alt"></i>
           </button>
         </div>
 
         <div class="current-temp">
-          <p class="location">New York City</p>
-          <p class="time">Saturday • 12:50 PM</p>
-          <p class="temp">55</p>
-          <p class="description">Weather Description</p>
-          <p class="low-high">low-high</p>
+          <p class="location" id="location">New York City</p>
+          <p class="time" id="time">Saturday • 12:50 PM</p>
+          <p class="temp" id="temp">55</p>
+          <p class="description" id="description">Weather Description</p>
+          <p class="low-high" id="low-high">low-high</p>
         </div>
         <img
           src="photos/quotesymbol.svg"
@@ -58,14 +58,25 @@
             you."
           </p>
           <p class="author">Princess Diana</p>
-
-          <input
-            type="text"
-            placeholder="Set Your Location"
-            class="form-control"
-            id="set-location"
-            autocomplete="off"
-          />
+          <form id="set-location">
+          <div id="set-location"></div>
+            <div class="row">
+              <div class="col-10 enter">
+                <input
+                  type="text"
+                  placeholder="Set Your Location"
+                  class="form-control"
+                  id="new-location"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-2 go">
+            <input type="submit" class="form-control" id="submit" value="go">
+              
+              </div>
+            </div>
+          </div>
+            </form>
 
           <div class="three-day">
             <div class="row">
@@ -104,5 +115,6 @@
         </div>
       </div>
     </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
