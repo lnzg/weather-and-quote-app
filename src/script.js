@@ -116,8 +116,6 @@ function threeDayMain(response) {
   let dayThree = document.querySelector("#day-three");
   let dayThreeDate = new Date(response.data.list[20].dt * 1000);
 
-  console.log(response);
-
   dayOne.innerHTML = day[dayOneDate.getDay()];
   dayTwo.innerHTML = day[dayTwoDate.getDay()];
   dayThree.innerHTML = day[dayThreeDate.getDay()];
@@ -230,3 +228,14 @@ function changeTempF(event) {
 
 let farenheight = document.querySelector("#f");
 farenheight.addEventListener("click", changeTempF);
+
+let quoteUrl = "https://random-math-quote-api.herokuapp.com/";
+axios.get(quoteUrl).then(quote);
+
+function quote(response) {
+  console.log(response);
+  let quotePhrase = document.querySelector("#quote");
+  quotePhrase.innerHTML = `"${response.data.quote}"`;
+  let author = document.querySelector("#author");
+  author.innerHTML = response.data.author;
+}
