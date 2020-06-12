@@ -67,6 +67,8 @@ function getWeather(response) {
   location.innerHTML = "Paris";
   let icon = document.querySelector("#top-icon");
   iconElement = response.data.weather[0].icon;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}MPH`;
 
   icon.setAttribute(
     "src",
@@ -233,7 +235,6 @@ let quoteUrl = "https://random-math-quote-api.herokuapp.com/";
 axios.get(quoteUrl).then(quote);
 
 function quote(response) {
-  console.log(response);
   let quotePhrase = document.querySelector("#quote");
   quotePhrase.innerHTML = `"${response.data.quote}"`;
   let author = document.querySelector("#author");

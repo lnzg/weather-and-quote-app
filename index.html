@@ -29,14 +29,19 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <img src="#" class="top-icon" id="top-icon" />
-        <div class="top-bar">
-          <span class="metric"><a href="#" id="c" class="c">C</a> | <a href="#" id="f" class="f active">F °</a></span>
-          <button class="geolocation" id="geolocation">
-            <i class="fas fa-map-marker-alt"></i>
-          </button>
+    <div class="all">
+      <div class="container">
+        <div class="header">
+          <img src="#" class="top-icon" id="top-icon" />
+          <div class="top-bar">
+            <span class="metric"
+              ><a href="#" id="c" class="c">C</a> |
+              <a href="#" id="f" class="f active">F °</a></span
+            >
+            <button class="geolocation" id="geolocation">
+              <i class="fas fa-map-marker-alt"></i>
+            </button>
+          </div>
         </div>
 
         <div class="current-temp">
@@ -45,6 +50,7 @@
           <p class="temp" id="temp">55</p>
           <p class="description" id="description">Weather Description</p>
           <p class="low-high" id="low-high">low-high</p>
+          <p class="wind" id="wind">wind:</p>
         </div>
         <img
           src="photos/quotesymbol.svg"
@@ -53,13 +59,14 @@
         />
         <div class="quote-section">
           <p class="quote" id="quote">
-            <br/>
+            <br />
           </p>
-          <p class="author" id="author"><br/></p>
+          <p class="author" id="author"><br /></p>
         </div>
-          <div class="bar">
+
+        <div class="bar">
           <form id="set-location">
-          <div id="set-location"></div>
+            <div id="set-location"></div>
             <div class="row">
               <div class="col-10 enter">
                 <input
@@ -71,60 +78,87 @@
                 />
               </div>
               <div class="col-2 go">
-            <input type="submit" class="form-control" id="submit" value="go">
-              </div>
+                <input
+                  type="submit"
+                  class="form-control"
+                  id="submit"
+                  value="go"
+                />
               </div>
             </div>
-          </div>
-            </form>
+          </form>
+        </div>
 
-          <div class="three-day">
-            <div class="row">
-              <div class="col-4">
-                <ul>
-                    <li>
-                      <p id="day-one" class="day">Day 1</p>
-
-                    </li>
-                  <li>
-                    <img src="#" alt="weather icon" id="icon-one" class="small-icon">
-                  </li>
-                  <li>
-                    <p id="day-one-temp" class="small-temp">temp</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-4">
-                <ul>
-                    <li>
-                        <p id="day-two" class="day">Day 2</p>
-                    </li>
-                  <li>
-                    <img src="#" alt="weather icon" id="icon-two" class="small-icon">
-                  </li>
-                  <li>
-                    <p id="day-two-temp" class="small-temp">temp</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-4">
-                <ul>
-                    <li>
-                        <p id="day-three" class="day">Day 3</p>
-                    </li>
-                  <li>
-                    <img src="#" alt="weather-icon" id="icon-three" class="small-icon">
-                  </li>
-                  <li>
-                    <p id="day-three-temp" class="small-temp">temp</p>
-                  </li>
-                </ul>
-              </div>
+        <div class="three-day">
+          <div class="row">
+            <div class="col-4">
+              <ul>
+                <li>
+                  <p id="day-one" class="day">Day 1</p>
+                </li>
+                <li>
+                  <img
+                    src="#"
+                    alt="weather icon"
+                    id="icon-one"
+                    class="small-icon"
+                  />
+                </li>
+                <li>
+                  <p id="day-one-temp" class="small-temp">temp</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li>
+                  <p id="day-two" class="day">Day 2</p>
+                </li>
+                <li>
+                  <img
+                    src="#"
+                    alt="weather icon"
+                    id="icon-two"
+                    class="small-icon"
+                  />
+                </li>
+                <li>
+                  <p id="day-two-temp" class="small-temp">temp</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li>
+                  <p id="day-three" class="day">Day 3</p>
+                </li>
+                <li>
+                  <img
+                    src="#"
+                    alt="weather-icon"
+                    id="icon-three"
+                    class="small-icon"
+                  />
+                </li>
+                <li>
+                  <p id="day-three-temp" class="small-temp">temp</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <footer>
+      <p>
+        <a href="https://github.com/lnzg/weather-and-quote-app"
+          >Open Source Code</a
+        >
+        by Lin
+      </p>
+    </footer>
+
     <script src="src/script.js"></script>
   </body>
 </html>

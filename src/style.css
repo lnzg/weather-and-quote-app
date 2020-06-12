@@ -1,4 +1,4 @@
-body {
+.all {
   margin: 0 auto;
   text-align: center;
   margin-top: 40px;
@@ -99,6 +99,10 @@ body {
   letter-spacing: 2px;
 }
 
+.wind {
+  margin-bottom: 4px;
+}
+
 .quotation-mark {
   margin-top: 10px;
   margin-bottom: 8px;
@@ -175,4 +179,9 @@ ul {
 .day {
   letter-spacing: 2px;
   margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  font-family: "Poiret One", cursive;
 }
