@@ -39,6 +39,8 @@ function searchWeather(response) {
   lowHigh.innerHTML = `Low/High: ${Math.round(
     response.data.main.temp_min
   )}°/${Math.round(response.data.main.temp_max)}°`;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}MPH`;
   let icon = document.querySelector("#top-icon");
   iconElement = response.data.weather[0].icon;
 
