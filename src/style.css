@@ -109,7 +109,7 @@ body {
 .quote-section {
   padding-top: 5px;
 
-  height: 250px;
+  min-height: 180px;
 }
 .quote {
   letter-spacing: 1px;
@@ -148,8 +148,7 @@ body {
 }
 
 .three-day {
-  margin-top: 10px 0px;
-  padding: 10px;
+  position: relative;
 }
 ul {
   padding-top: 10px;
