@@ -17,13 +17,15 @@ geolocation.addEventListener("click", retrievePosition);
 
 // New Search Location
 
+function search(city) {
+  let apiKey = "0577bd96999db21b7c2f3eef1b033562";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+  axios.get(apiUrl).then(searchWeather);
+}
 function newLocation(event) {
   event.preventDefault();
   let setPlace = document.querySelector("#new-location");
-
-  let apiKey = "0577bd96999db21b7c2f3eef1b033562";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${setPlace.value}&units=imperial&appid=${apiKey}`;
-  axios.get(apiUrl).then(searchWeather);
+  search(setPlace.value);
 }
 
 function searchWeather(response) {
@@ -53,34 +55,7 @@ function searchWeather(response) {
 let submit = document.querySelector("#set-location");
 submit.addEventListener("submit", newLocation);
 
-// Default Location
-
-function getWeather(response) {
-  let newTemp = document.querySelector("#temp");
-  let location = document.querySelector("#location");
-  let weatherDescription = document.querySelector("#description");
-  weatherDescription.innerHTML = response.data.weather[0].description;
-  currentFar = response.data.main.temp;
-  let lowHigh = document.querySelector("#low-high");
-  lowHigh.innerHTML = `Low/High: ${Math.round(
-    response.data.main.temp_min
-  )}°/${Math.round(response.data.main.temp_max)}°`;
-  newTemp.innerHTML = Math.round(response.data.main.temp);
-  location.innerHTML = "Paris";
-  let icon = document.querySelector("#top-icon");
-  iconElement = response.data.weather[0].icon;
-  let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} MPH`;
-
-  icon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${iconElement}@2x.png`
-  );
-}
-
-let apiKey = "0577bd96999db21b7c2f3eef1b033562";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Paris&units=imperial&appid=${apiKey}`;
-axios.get(apiUrl).then(getWeather);
+search("Paris");
 
 function threeDayMain(response) {
   let dayOneTemp = document.querySelector("#day-one-temp");
@@ -114,11 +89,11 @@ function threeDayMain(response) {
   // smaller icon day
 
   let dayOne = document.querySelector("#day-one");
-  let dayOneDate = new Date(response.data.list[1].dt * 1000);
+  let dayOneDate = new Date(response.data.list[8].dt * 1000);
   let dayTwo = document.querySelector("#day-two");
-  let dayTwoDate = new Date(response.data.list[10].dt * 1000);
+  let dayTwoDate = new Date(response.data.list[15].dt * 1000);
   let dayThree = document.querySelector("#day-three");
-  let dayThreeDate = new Date(response.data.list[20].dt * 1000);
+  let dayThreeDate = new Date(response.data.list[24].dt * 1000);
 
   dayOne.innerHTML = day[dayOneDate.getDay()];
   dayTwo.innerHTML = day[dayTwoDate.getDay()];
