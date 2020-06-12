@@ -1,9 +1,13 @@
+body {
+  margin-top: 40px;
+}
+
 .all {
   margin: 0 auto;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0px;
   width: 414px;
-  height: 800px;
+  min-height: 800px;
   border: 1px solid black;
   border-radius: 20px;
   padding: 8px 5px;
