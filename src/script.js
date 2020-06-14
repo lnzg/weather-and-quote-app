@@ -158,19 +158,15 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-function getSmallDay() {
-  let dayOne = document.querySelector("#day-one");
-  let dayTwo = document.querySelector("#day-two");
-  let dayThree = document.querySelector("#day-three");
+let dayOne = document.querySelector("#day-one");
+let dayTwo = document.querySelector("#day-two");
+let dayThree = document.querySelector("#day-three");
 
-  dayOne.innerHTML = day[now.getDay() + 1];
+dayOne.innerHTML = day[now.getDay() + 1];
 
-  dayTwo.innerHTML = day[now.getDay() + 2];
+dayTwo.innerHTML = day[now.getDay() + 2];
 
-  dayThree.innerHTML = day[now.getDay() + 3];
-}
-
-console.log(getSmallDay);
+dayThree.innerHTML = day[now.getDay() + 3];
 
 time.innerHTML = `${currentDay} ${hour}:${minutes}`;
 
