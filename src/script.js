@@ -162,11 +162,24 @@ let dayOne = document.querySelector("#day-one");
 let dayTwo = document.querySelector("#day-two");
 let dayThree = document.querySelector("#day-three");
 
-dayOne.innerHTML = day[now.getDay() + 1];
+let dayOneValue = day[now.getDay() + 1];
+if (dayOneValue === undefined) {
+  dayOneValue = "Sunday";
+}
 
-dayTwo.innerHTML = day[now.getDay() + 2];
+let dayTwoValue = day[now.getDay() + 2];
+if (dayTwoValue === undefined) {
+  dayTwoValue = "Sunday";
+}
 
-dayThree.innerHTML = day[now.getDay() + 3];
+let dayThreeValue = day[now.getDay() + 3];
+if (dayThreeValue === undefined) {
+  dayThreeValue = "Sunday";
+}
+
+dayOne.innerHTML = dayOneValue;
+dayTwo.innerHTML = dayTwoValue;
+dayThree.innerHTML = dayThreeValue;
 
 time.innerHTML = `${currentDay} ${hour}:${minutes}`;
 
