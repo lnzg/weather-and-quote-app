@@ -85,19 +85,6 @@ function threeDayMain(response) {
     "src",
     `http://openweathermap.org/img/wn/${iconIdThree}@2x.png`
   );
-
-  // smaller icon day
-
-  let dayOne = document.querySelector("#day-one");
-  let dayOneDate = new Date(response.data.list[8].dt * 1000);
-  let dayTwo = document.querySelector("#day-two");
-  let dayTwoDate = new Date(response.data.list[15].dt * 1000);
-  let dayThree = document.querySelector("#day-three");
-  let dayThreeDate = new Date(response.data.list[24].dt * 1000);
-
-  dayOne.innerHTML = day[dayOneDate.getDay()];
-  dayTwo.innerHTML = day[dayTwoDate.getDay()];
-  dayThree.innerHTML = day[dayThreeDate.getDay()];
 }
 
 let apiKeyOne = "0577bd96999db21b7c2f3eef1b033562";
@@ -171,13 +158,19 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-let dayOne = document.querySelector("#day-one");
-let dayTwo = document.querySelector("#day-two");
-let dayThree = document.querySelector("#day-three");
+function getSmallDay() {
+  let dayOne = document.querySelector("#day-one");
+  let dayTwo = document.querySelector("#day-two");
+  let dayThree = document.querySelector("#day-three");
 
-dayOne.innerHTML = day[now.getDay() + 1];
-dayTwo.innerHTML = day[now.getDay() + 2];
-dayThree.innerHTML = day[now.getDay() + 3];
+  dayOne.innerHTML = day[now.getDay() + 1];
+
+  dayTwo.innerHTML = day[now.getDay() + 2];
+
+  dayThree.innerHTML = day[now.getDay() + 3];
+}
+
+console.log(getSmallDay);
 
 time.innerHTML = `${currentDay} ${hour}:${minutes}`;
 
